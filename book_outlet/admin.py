@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book
+from .models import *
 
 class BookAdmin(admin.ModelAdmin): # allows to make changes in the admin fields.
     # readonly_fields = ("slug",) # creates a slug field that is read only.
@@ -8,3 +8,5 @@ class BookAdmin(admin.ModelAdmin): # allows to make changes in the admin fields.
     list_display = ("title", "author", "rating") # adds a list display to the admin page.
 
 admin.site.register(Book, BookAdmin)
+admin.site.register(Author)
+

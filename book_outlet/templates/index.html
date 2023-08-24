@@ -1,8 +1,12 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}
   index
 {% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock css_files %}
 
 {% block content %}
   <ul>
